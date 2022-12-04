@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafio 6 - Lista de Produtos</title>
+
+    <!-- Font Icon -->
+    <link rel="shortcut icon" href="img/icon.png" >
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css'>
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+    <div class="main">
+
+
+        <!-- Sing in  Form -->
+        <section class="sign-in">
+            <div class="container"  style="margin-top: 20px; ">
+                <div class="signin-content">
+                    <div class="signin-image d-none d-md-block">
+                        <figure><img src="img/Ecommerce.png" width="500" alt="Estudantes"></figure>
+                    </div>
+
+                    <div class="signin-form">
+                        <h4 class="form-title">Cadastro de produtos</h4>
+                        <form class="register-form" id="form" name="form">
+							<div class="form-group">
+                                <label for="nome"><i class="zmdi zmdi-shopping-cart material-icons-name"></i></label>
+                                <input type="email" name="nomericao" id="nome" placeholder="Nome do produto">
+                                <span id="msg_erro_nome" name="msg_erro_nome" class="msg-erro"></span>
+                                
+                            </div>
+
+                            <div class="form-group">
+                                <label for="desc"><i class="zmdi zmdi-filter-frames material-icons-name"></i></label>
+                                <input type="email" name="descricao" id="desc" placeholder="Descrição do produto">
+                                <span id="msg_erro_desc" name="msg_erro_desc" class="msg-erro"></span>
+                                
+                            </div>
+
+                            <div class="form-group">
+                                <label for="valor"><i class="zmdi zmdi-balance-wallet material-icons-name"></i></label>
+                                <input type="text" class="real" name="valor" id="valor" placeholder="Valor R$:" >
+           
+                                <span id="msg_erro_valor" name="msg_erro_valor" class="msg-erro"></span>
+                                <span id="erro_num_valor" name="erro_num_valor" class="msg-erro"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="qtd"><i class="zmdi zmdi-assignment-o material-icons-name"></i></label>
+                                <input type="email" name="quantidade" id="qtd" placeholder="Quantidade">
+                                <span id="msg_erro_qtd" name="msg_erro_qtd" class="msg-erro"></span>
+								<span id="erro_num_qtd" name="erro_num_qtd" class="msg-erro"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="callout ">
+
+                                   <span class="tit_ok2" style="font-weight: bold;"> Subtotal:</span> <span class="tit_ok2"  id="subtotal"></span> 
+                                    <br>
+                                 </div>
+                            </div>
+  
+                        </form>
+                        <div class="form-group text-center my-4 form-button">
+
+                            <button
+                            type="button"
+                            name=""
+                            id="btnAdd"
+                            onclick="add()" 
+                            class="btn btn-sm btn-sucess form-submit"
+                            btn-lg
+                            btn-block
+                        >
+                            Adicionar</button
+                        >&nbsp;
+                        <button
+                            type="button"
+                            name=""
+                            id="btnRemove"
+                            onclick="remove()"
+                            class="btn btn-sm btn-sucess form-submit"
+                            btn-lg
+                            btn-block
+                        >
+                            Remover</button
+                        >&nbsp;
+                        <button
+                            type="button"
+                            name=""
+                            id="btnLista"
+                            onclick="limpar()"
+                            class="btn btn-sm btn-sucess form-submit"
+                            btn-lg
+                            btn-block
+                        >
+                            Limpar</button
+                        >&nbsp;
+                        <button
+                            type="button"
+                            name=""
+                            id="btnLista"
+                            onclick="list()"
+                            class="btn btn-sm btn-sucess form-submit"
+                            btn-lg
+                            btn-block
+                        >
+                            Listar
+                        </button>
+                        
+                        </div>
+                    </div>
+
+                    
+                </div>
+               
+            </div>
+        
+            <div class="container"  style="margin-top: 40px; margin-bottom: 40px;">
+                <div class="row">
+                    <div class="col  text-center" id="mostrar" >
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="js/ctt.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js'></script>
+    <script src="js/moedas.js"></script>
+</body>
+</html>
+
